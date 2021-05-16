@@ -1,9 +1,9 @@
 FROM golang:latest
 
-WORKDIR /app
+WORKDIR /go/src/app
 
 COPY . .
 
-RUN go build -o math
+RUN go build math.go
 
 CMD ["./math"]
